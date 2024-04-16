@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int i, suma, elementos[10];
     elementos[0] = 12;
     elementos[1] = 2;
@@ -13,6 +14,9 @@ int main() {
     elementos[8] = 3;
     elementos[9] = 10;
 
-    for (i=0; i<10; i++) {suma+=elementos[i];}
+    for (i = 0; i < 10; i++)
+    {
+        suma += elementos[i];
+    }
     printf("la suma de todos los numeros es %i", suma);
 }

@@ -1,6 +1,7 @@
 #include <stdio.h>
-//arreglos y vectores
-int main() {
+// arreglos y vectores
+int main()
+{
     int vector[5];
     vector[0] = 21;
     vector[1] = 2;

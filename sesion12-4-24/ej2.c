@@ -1,6 +1,7 @@
 #include <stdio.h>
-//arreglo de floats
-int main() {
+// arreglo de floats
+int main()
+{
     float arreglo[7];
     arreglo[0] = 4.4;
     arreglo[1] = 28.1;
