@@ -1,40 +1,39 @@
 #include <stdio.h>
 
-void convertirFahr(float fahr) {
-    float celsius = 5/9 * (fahr + 32);
-    printf("la temperatura en grados celsius es: %.2f\n\n", celsius);
+void fahr_a_celsius(float fahr) {
+    float celsius = (fahr - 32) * 5/9;
+    printf("%.2f fahrenheit es igual a %.2f celsius\n\n", fahr, celsius);
 }
 
-void convertirCelsius(float celsius) {
-    float fahr = (9/5 * celsius) - 32;
-    printf("la temperatura en grados fahrenheit es: %.2f\n\n", fahr);
+void celsius_a_fahr(float celsius) {
+    float fahr = (celsius * 9/5) + 32;
+    printf("%.2f celsius es igual a %.2f fahrenheit\n\n", celsius, fahr);
 }
 
 int main() {
     int opcion;
-    float fahr, celsius;
+    float temp;
     //menu
-    printf("1. Convertir de Fahrenheit a Celsius\n");
-    printf("2. Convertir de Celsius a Fahrenheit\n");
+    printf("1. Convertir de fahrenheit a celsius\n");
+    printf("2. Convertir de celsius a fahrenheit\n");
     printf("3. Salir\n");
     printf("Escoga: \n");
     scanf("%i", &opcion);
 
     //function calls
     switch (opcion) {
-    case 1:
-        printf("cual es la temperatura en fahrenheit?\n");
-        scanf("%f", &fahr);
-        convertirFahr(fahr);
-        break;
-    case 2:
-        printf("cual es la temperatura en celsius?\n");
-        scanf("%f", &celsius);
-        convertirCelsius(celsius);
-        break;
-
-    case 3: break;
-    default: printf("opcion invalida...\n\n"); break;
+        case 1:
+            printf("cuanto es la temperatura en fahrenheit?\n");
+            scanf("%f", &temp);
+            fahr_a_celsius(temp);
+            break;
+        case 2:
+            printf("cuanto es la temperatura en celsius?\n");
+            scanf("%f", &temp);
+            celsius_a_fahr(temp);
+            break;
+        case 3: break;
+        default: printf("opcion invalida...\n\n"); break;
     }
 
     //reiniciar menu
