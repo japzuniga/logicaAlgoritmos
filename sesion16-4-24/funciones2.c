@@ -5,13 +5,13 @@ joven (>=13) o adulto (>=21)*/
 void evaluarEdad(int edad)
 {
     if (edad >= 0 && edad < 13)
-        printf("sos niño\n");
+        printf("sos niño\n\n");
     else if (edad >= 13)
-        printf("sos joven\n");
+        printf("sos joven\n\n");
     else if (edad >= 21)
-        printf("sos adulto :/\n");
+        printf("sos adulto .<.\n\n");
     else
-        printf("edad invalida...\n");
+        printf("edad invalida...\n\n");
 }
 
 int main()
