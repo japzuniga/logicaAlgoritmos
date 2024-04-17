@@ -64,9 +64,7 @@ int main() {
         break;
 
     case 5: break;
-    default:
-        printf("opcion invalida...\n\n");
-        break;
+    default: printf("opcion invalida...\n\n"); break;
     }
 
     //reiniciar menu
