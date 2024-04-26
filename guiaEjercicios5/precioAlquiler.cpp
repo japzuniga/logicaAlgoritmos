@@ -22,9 +22,30 @@ void checkearPrecio(float km) {
 
     //+ iva
     precio = precio + (precio*0.15);
-    cout << precio;
+    float precio_sin_impuesto = precio - (precio*0.15);
+    cout << "precio con impuestos: " << precio << "\n";
+    cout << "precio sin impuestos: " << precio_sin_impuesto << "\n";
 }
 
 main() {
-    checkearPrecio(863.481);
+    int opcion;
+    float km;
+    cout << "1. Calcular precio de alquiler\n";
+    cout << "2. Salir\n";
+    cout << "Escoga: ";
+    cin >> opcion;
+        
+    switch (opcion) {
+    case 1:
+        cout << "cuantos kilometros recorrio?\n";
+        cin >> km;
+        checkearPrecio(km);
+        break;
+    case 2: break;
+    default:
+        cout << "opcion invalida...\n\n";
+        break;
+    }
+
+    if (opcion != 2) { main(); }
 }
