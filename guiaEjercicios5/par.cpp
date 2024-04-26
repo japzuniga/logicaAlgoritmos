@@ -1,3 +1,5 @@
+/*Escribir un programa para deducir
+si una variable o expresión numérica es par.*/
 #include <iostream>
 using namespace std;
 
