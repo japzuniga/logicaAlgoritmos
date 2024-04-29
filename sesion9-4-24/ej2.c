@@ -10,5 +10,5 @@ int main()
     scanf("%s", nombre);
     printf("cual es tu apellido?");
     scanf("%s", apellido);
-    printf("Tu nombr ecompleto es %s %s.\n", nombre, apellido);
+    printf("Tu nombre completo es %s %s.\n", nombre, apellido);
 }
