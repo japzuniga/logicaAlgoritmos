@@ -21,10 +21,9 @@ void checkearPrecio(float km) {
     }
 
     //+ iva
-    precio = precio + (precio*0.15);
-    float precio_sin_impuesto = precio - (precio*0.15);
-    cout << "precio con impuestos: " << precio << "\n";
-    cout << "precio sin impuestos: " << precio_sin_impuesto << "\n";
+    float precio_con_impuesto = precio + (precio*0.15);
+    cout << "precio con impuestos: " << precio_con_impuesto << "\n";
+    cout << "precio sin impuestos: " << precio << "\n";
 }
 
 main() {
