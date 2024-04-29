@@ -1,7 +1,3 @@
-/*Escribir un programa que lea los tres lados
-de un triángulo. Determinar el tipo de triángulo:
-equilátero, si tiene tres lados iguales;
-o isósceles, si tiene dos lados iguales.*/
 #include <iostream>
 using namespace std;
 
