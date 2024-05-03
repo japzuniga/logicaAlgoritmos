@@ -4,11 +4,11 @@ realiza intercambiando filas por columnas. Imprime la matriz transpuesta como sa
 
 #include <iostream>
 using namespace std;
-#define MAX_X 5
-#define MAX_Y 5
+#define FILAS 5
+#define COLUMNAS 5
 
-int matriz[MAX_X][MAX_Y];
-int transpuesta[MAX_X][MAX_Y];
+int matriz[FILAS][COLUMNAS];
+int transpuesta[FILAS][COLUMNAS];
 int filas, columnas;
 
 void ingresar(int filas, int columnas) {

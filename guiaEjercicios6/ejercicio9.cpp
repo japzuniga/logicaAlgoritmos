@@ -5,12 +5,12 @@ muestra la matriz resultante.*/
 
 #include <iostream>
 using namespace std;
-#define MAX_X 5
-#define MAX_Y 5
+#define FILAS 5
+#define COLUMNAS 5
 
-int matriz1[MAX_X][MAX_Y];
-int matriz2[MAX_X][MAX_Y];
-int producto[MAX_X][MAX_Y];
+int matriz1[FILAS][COLUMNAS];
+int matriz2[FILAS][COLUMNAS];
+int producto[FILAS][COLUMNAS];
 int filas1, filas2, columnas1, columnas2;
 
 void ingresar(int num_matriz) {
@@ -47,11 +47,19 @@ void ingresar(int num_matriz) {
 }
 
 void multiplicar() {
+    //checkear si las matrices son compatibles para multiplicacion
     if (columnas1 == filas2) {
+        
+        //carga las filas de matriz1
         for (int x = 0; x < filas1; x++) {
+            
+            //carga las columnas de matriz2
             for (int y = 0; y < columnas2; y++) {
+                //inicializa todos los valores de la matriz producto para luego sumarle los valores
                 producto[x][y] = 0;
-                for (int z= 0; z < columnas1; z++) {
+
+                //iterar sobre la fila de matriz1 y la columna de matriz2
+                for (int z = 0; z < columnas1; z++) {
                     producto[x][y] += matriz1[x][z] * matriz2[z][y];
                 }
             }
