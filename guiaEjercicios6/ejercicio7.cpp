@@ -4,22 +4,29 @@ El resultado debe mostrarse en un tercer vector.*/
 
 #include <iostream>
 using namespace std;
-#define MAX 2
+#define MAX 6
 int vector1[MAX];
 int vector2[MAX];
 int suma_vectores[MAX];
 
-void ingresar()
+void ingresar(int longitud)
 {
     int num1, num2;
-    for (int i = 0; i < MAX; i++)
+    if (longitud < MAX)
     {
-        cout << "\ningresar numero " << i + 1 << " a vector 1: ";
-        cin >> num1;
-        vector1[i] = num1;
-        cout << "ingresar numero " << i + 1 << " a vector 2: ";
-        cin >> num2;
-        vector2[i] = num2;
+        for (int i = 0; i < longitud; i++)
+        {
+            cout << "\ningresar numero " << i + 1 << " a vector 1: ";
+            cin >> num1;
+            vector1[i] = num1;
+            cout << "ingresar numero " << i + 1 << " a vector 2: ";
+            cin >> num2;
+            vector2[i] = num2;
+        }
+    }
+    else
+    {
+        cout << "\nerror: longitud excede valor maximo" << endl;
     }
 }
 
@@ -46,7 +53,7 @@ void sumar()
 
 main()
 {
-    int opcion;
+    int opcion, longitud;
     cout << "\n1. ingresar numeros a vectores" << endl;
     cout << "2. sumar vectores" << endl;
     cout << "3. salir" << endl;
@@ -56,7 +63,9 @@ main()
     switch (opcion)
     {
     case 1:
-        ingresar();
+        cout << "\ningresar longitud de vectores: ";
+        cin >> longitud;
+        ingresar(longitud);
         break;
     case 2:
         sumar();
