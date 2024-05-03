@@ -1,5 +1,5 @@
 Proceso promedio10
-	definir i, x como entero;
+	definir i como entero;
 	definir notas, suma, promedio como real;
 	dimensionar notas[10];
 	suma <- 0;
@@ -9,8 +9,8 @@ Proceso promedio10
 		leer notas[i];
 	FinPara
 	
-	para x<-0 hasta 9 con paso +1 Hacer
-		suma <- +notas[x];
+	para i<-0 hasta 9 con paso +1 Hacer
+		suma <- suma + notas[i];
 	FinPara
 	
 	promedio <- suma/10;

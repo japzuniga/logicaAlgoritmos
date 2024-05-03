@@ -8,7 +8,7 @@ Proceso sumarHastaN
 		escribir "error: el numero ingresado no es un numero natural";
 	SiNo
 		para i<-1 hasta num con paso +1 Hacer
-			suma <- +i;
+			suma <- suma + i;
 		FinPara
 	FinSi
 	

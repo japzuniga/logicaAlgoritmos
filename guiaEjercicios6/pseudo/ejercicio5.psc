@@ -1,5 +1,5 @@
 Proceso promedio8
-	definir i, x, z, aprobados, reprobados como entero;
+	definir i, aprobados, reprobados como entero;
 	definir notas, suma, promedio como real;
 	dimensionar notas[10];
 	suma <- 0;
@@ -11,16 +11,16 @@ Proceso promedio8
 		leer notas[i];
 	FinPara
 	
-	para z<-0 hasta 9 con paso +1 Hacer
-		si (notas[z] > 70) Entonces
-			aprobados <- +1;
+	para i<-0 hasta 9 con paso +1 Hacer
+		si (notas[i] > 70) Entonces
+			aprobados <- aprobados + 1;
 		SiNo
-			reprobados <- +1;
+			reprobados <- reprobados + 1;
 		FinSi
 	FinPara
 	
-	para x<-0 hasta 9 con paso +1 Hacer
-		suma <- +notas[x];
+	para i<-0 hasta 9 con paso +1 Hacer
+		suma <- suma + notas[i];
 	FinPara
 	
 	promedio <- suma/10;
