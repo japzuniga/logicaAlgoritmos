@@ -59,17 +59,14 @@ void multiplicar()
     // checkear si las matrices son compatibles para multiplicacion
     if (columnas1 == filas2)
     {
-
         // carga las filas de matriz1
         for (int x = 0; x < filas1; x++)
         {
-
             // carga las columnas de matriz2
             for (int y = 0; y < columnas2; y++)
             {
-                // inicializa todos los valores de la matriz producto para luego sumarle los valores
+                // inicializa las posiciones del producto para luego sumarle los valores
                 producto[x][y] = 0;
-
                 // iterar sobre la fila de matriz1 y la columna de matriz2
                 for (int z = 0; z < columnas1; z++)
                 {

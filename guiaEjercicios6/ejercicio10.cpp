@@ -61,7 +61,6 @@ void transponer()
     {
         // abrir corchete cuando se inicia una nueva fila
         cout << "[";
-
         // imprimir numeros de la columna
         for (int y = 0; y < filas; y++)
         {
