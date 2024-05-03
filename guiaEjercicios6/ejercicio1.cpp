@@ -5,7 +5,7 @@ using namespace std;
 
 void sumar(int n) {
     int suma = 0;
-    if (n < 0) { cout << "\nERROR: el numero ingresado no es un numero natural" << endl; }
+    if (n < 1) { cout << "\nERROR: el numero ingresado no es un numero natural" << endl; }
     else {
         for (int i = 1; i <= n; i++) { suma += i; }
     }
