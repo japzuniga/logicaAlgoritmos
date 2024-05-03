@@ -30,7 +30,7 @@ main() {
     cout << "\n1. agregar notas de estudiantes" << endl;
     cout << "2. calcular promedio de estudiantes" << endl;
     cout << "3. salir" << endl;
-    cout << "escoga: ";
+    cout << "escoja: ";
     cin >> opcion;
 
     switch (opcion) {

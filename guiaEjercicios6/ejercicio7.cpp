@@ -38,7 +38,7 @@ main() {
     cout << "\n1. ingresar numeros a vectores" << endl;
     cout << "2. sumar vectores" << endl;
     cout << "3. salir" << endl;
-    cout << "escoga: ";
+    cout << "escoja: ";
     cin >> opcion;
 
     switch (opcion) {

@@ -45,7 +45,7 @@ main() {
     cout << "2. mostrar cuantos estudiantes aprobaron y reprobaron" << endl;
     cout << "3. calcular promedio de estudiantes" << endl;
     cout << "4. salir" << endl;
-    cout << "escoga: ";
+    cout << "escoja: ";
     cin >> opcion;
 
     switch (opcion) {
