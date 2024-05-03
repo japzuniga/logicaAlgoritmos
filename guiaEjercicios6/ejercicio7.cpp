@@ -9,31 +9,43 @@ int vector1[MAX];
 int vector2[MAX];
 int suma_vectores[MAX];
 
-void ingresar() {
+void ingresar()
+{
     int num1, num2;
-    for (int i = 0; i < MAX; i++) {
-        cout << "\ningresar numero " << i+1 << " a vector 1: ";
+    for (int i = 0; i < MAX; i++)
+    {
+        cout << "\ningresar numero " << i + 1 << " a vector 1: ";
         cin >> num1;
         vector1[i] = num1;
-        cout << "ingresar numero " << i+1 << " a vector 2: ";
+        cout << "ingresar numero " << i + 1 << " a vector 2: ";
         cin >> num2;
         vector2[i] = num2;
     }
 }
 
-void sumar() {
-    for (int i = 0; i < MAX; i++) {
+void sumar()
+{
+    for (int i = 0; i < MAX; i++)
+    {
         suma_vectores[i] = vector1[i] + vector2[i];
     }
 
     cout << "\nla suma de los dos vectores es: {";
-    for (int i = 0; i < MAX; i++) {
-        if (i == MAX-1) { cout << suma_vectores[i] << "}" << endl; }
-        else { cout << suma_vectores[i] << ", ";}
+    for (int i = 0; i < MAX; i++)
+    {
+        if (i == MAX - 1)
+        {
+            cout << suma_vectores[i] << "}" << endl;
+        }
+        else
+        {
+            cout << suma_vectores[i] << ", ";
+        }
     }
 }
 
-main() {
+main()
+{
     int opcion;
     cout << "\n1. ingresar numeros a vectores" << endl;
     cout << "2. sumar vectores" << endl;
@@ -41,7 +53,8 @@ main() {
     cout << "escoja: ";
     cin >> opcion;
 
-    switch (opcion) {
+    switch (opcion)
+    {
     case 1:
         ingresar();
         break;
@@ -56,5 +69,8 @@ main() {
         break;
     }
 
-    if (opcion != 3) { main(); }
+    if (opcion != 3)
+    {
+        main();
+    }
 }
