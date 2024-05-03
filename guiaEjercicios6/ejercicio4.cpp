@@ -5,7 +5,7 @@ por 10 estudiantes y que se tiene la nota de cada uno de ellos.*/
 #include <iostream>
 using namespace std;
 #define MAX 10
-int notas[MAX];
+float notas[MAX];
 int indice = 0;
 
 void agregarNotas(float nota)
