@@ -12,37 +12,47 @@ int transpuesta[MAX_X][MAX_Y];
 int filas, columnas;
 
 void ingresar(int filas, int columnas) {
-    int temp;
+    //entradas:
+    int num;
     cout << endl;
-    for (int i = 0; i < filas; i++) {
-        for (int x = 0; x < columnas; x++) {
-            cout << "ingresar numero en fila " << i+1 << ", columna " << x+1 << ": ";
-            cin >> temp;
-            matriz[i][x] = temp;
+    for (int x = 0; x < filas; x++) {
+        for (int y = 0; y < columnas; y++) {
+            cout << "ingresar numero en fila " << x+1 << ", columna " << y+1 << ": ";
+            cin >> num;
+            matriz[x][y] = num;
         }
     }
 }
 
 void transponer() {
-    for (int i = 0; i < filas; i++) {
-        for (int x = 0; x < columnas; x++) {
-            transpuesta[x][i] = matriz[i][x];
+    //intercambia las filas y columnas de la matriz
+    for (int x = 0; x < filas; x++) {
+        for (int y = 0; y < columnas; y++) {
+            transpuesta[y][x] = matriz[x][y];
         }
     }
 
-    cout << "\nla transposicion de la matriz ingresada es: { ";
-    for (int i = 0; i < columnas; i++) {
+    cout << "\nmatriz ingresada:" << endl;
+    for (int x = 0; x < filas; x++) {
         cout << "[";
-        for (int x = 0; x < filas; x++) {
-            if (x == filas-1) {
-                cout << transpuesta[i][x] << "], ";
-            }
-            else if ((x == filas-1) && (i == columnas-1)) {
-                cout << transpuesta[i][x] << "] }" << endl;
-            }
-            else {
-                cout << transpuesta[i][x] << ", ";
-            }
+        for (int y = 0; y < columnas; y++) {
+            if (y == columnas-1) { cout << matriz[x][y] << "]" << endl; }
+            else { cout << matriz[x][y] << ", "; }
+        }
+    }
+
+    //salida:
+    cout << "\ntransposicion de matriz ingresada:" << endl;
+    for (int x = 0; x < columnas; x++) {
+        //abrir corchete cuando se inicia una nueva fila
+        cout << "[";
+
+        //imprimir numeros de la columna
+        for (int y = 0; y < filas; y++) {
+            //si esta en el ultimo numero de la fila, imprimir el numero y cerrar corchete (sin coma)
+            if (y == filas-1) { cout << transpuesta[x][y] << "]" << endl; }
+            //si no es el ultimo numero, imprimir el numero, un coma y un espacio para que el proximo numero este separado
+            else { cout << transpuesta[x][y] << ", "; }
         }
     }
 }
@@ -52,7 +62,7 @@ main() {
     cout << "\n1. ingresar datos de matriz" << endl;
     cout << "2. transponer matriz" << endl;
     cout << "3. salir" << endl;
-    cout << "escoga: ";
+    cout << "escoja: ";
     cin >> opcion;
 
     switch (opcion) {
