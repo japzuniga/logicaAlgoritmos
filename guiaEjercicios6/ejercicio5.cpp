@@ -35,8 +35,8 @@ void aprobar()
         }
     }
 
-    cout << endl
-         << aprobados << " estudiantes aprobaron la clase" << endl;
+    cout << endl;
+    cout << aprobados << " estudiantes aprobaron la clase" << endl;
     cout << reprobados << " estudiantes reprobaron la clase" << endl;
 }
 
