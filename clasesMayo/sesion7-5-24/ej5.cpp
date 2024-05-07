@@ -1,7 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void checkear(int num) {
+main() {
+    int num;
+    cout << "ingrese un numero: ";
+    cin >> num;
+    
     bool prime = true;
     int i = 2;
     while (i < num) {
@@ -18,11 +22,4 @@ void checkear(int num) {
     } else {
         cout << num << " no es primo" << endl;
     }
-}
-
-main() {
-    int num;
-    cout << "ingrese un numero: ";
-    cin >> num;
-    checkear(num);
 }
