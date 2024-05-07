@@ -13,11 +13,11 @@ main() {
             prime = false;
             break;
         }
-
         i++;
     }
-
-    if (prime == true) {
+    if (num == 1) {
+        cout << "1 no es primo";
+    } else if (prime == true) {
         cout << num << " es primo" << endl;
     } else {
         cout << num << " no es primo" << endl;
