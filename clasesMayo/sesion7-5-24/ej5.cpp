@@ -15,6 +15,7 @@ main() {
         }
         i++;
     }
+    
     if (num == 1) {
         cout << "1 no es primo";
     } else if (prime == true) {
