@@ -7,7 +7,7 @@ using namespace std;
 #define MAX 5
 
 main() {
-    int nums[MAX], i = 0;
+    int nums[MAX], i = 0, j = 0;
     while (i < MAX) {
         cout << "ingresar numero " << i+1 << ": ";
         cin >> nums[i];
@@ -16,12 +16,12 @@ main() {
 
     i = 0;
     while (i < MAX) {
-        int j = i+1;
+         j = i+1;
         while (j < MAX) {
-            if (nums[j] > nums[j+1]) {
+            if (nums[j] < nums[i]) {
                 int temp = nums[j];
-                nums[j] = nums[j+1];
-                nums[j+1] = temp;
+                nums[j] = nums[i];
+                nums[i] = temp;
             }
             j++;
         }
