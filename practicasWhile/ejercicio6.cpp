@@ -8,7 +8,7 @@ int main()
     cout << "Ingrese el numero de calificaciones: ";
     cin >> numCalificaciones;
 
-    int calificaciones[numCalificaciones];
+    float calificaciones[numCalificaciones];
     float suma = 0;
     float promedio;
     int i = 0;
