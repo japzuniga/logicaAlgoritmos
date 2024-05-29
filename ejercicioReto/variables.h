@@ -1,11 +1,12 @@
 #define MAX_CH 50
 #define MAX_CAT 500
+using namespace std;
 
 typedef struct BOOK {
     int year;
-    std::string ISBN;
-    std::string title;
-    std::string author;
+    string ISBN;
+    string title;
+    string author;
     bool available = true;
 } BOOK;
 
