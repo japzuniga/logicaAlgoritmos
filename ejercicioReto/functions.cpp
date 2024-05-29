@@ -245,4 +245,4 @@ void deleteBook() {
         cout << "\nBook deleted from catalogue...\n\n";
         position--;
     }
-}     
+}
