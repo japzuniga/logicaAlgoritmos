@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <cstdlib>
 #include <string.h>
 #include "variables.h"
 using namespace std;
@@ -22,6 +24,10 @@ void mostrarTodo();
 void mostrarCiudad();
 void editar();
 void eliminar();
+
+//funciones de archivos:
+int loadCities();
+void writeFile(const CITY &city);
 
 //************************************************************************************************
 
@@ -200,4 +206,33 @@ void eliminar() {
     destroyCity(id);
 
     cout << "\nCiudad eliminada de registro...\n\n";
+}
+
+int loadCities() {
+    ifstream archivo("cities.txt");
+    if (archivo.fail()) {
+        cout << "No se pudo abrir el archivo\n";
+        return 0;
+    }
+
+    int i = 0;
+    while (archivo >> cities[i].id) {
+        archivo.ignore();
+        archivo.getline(cities[i].name, 30);
+        archivo.getline(cities[i].description, 100);
+        archivo.close();
+        return i;
+    }
+}
+
+void writeFile(const CITY &city) {
+    ofstream archivo("cities.txt", ios::app);
+    if (archivo.fail()) {
+        cout << "No se pudo abrir el archivo\n";
+        exit(1);
+    }
+
+    archivo << city.id << "\n";
+    archivo << city.name << "\n";
+    archivo << city.description << "\n";
 }
