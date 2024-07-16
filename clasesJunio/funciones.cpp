@@ -48,6 +48,7 @@ int menu() {
 
 void principal() {
     int op;
+    pos = loadCities();
     do {
         system("cls || clear");
         op = menu();
@@ -152,6 +153,7 @@ void pedirDato() {
     scanf(" %[^\n]", city.description);
 
     addCity(&city);
+    writeFile(city);
 }
 
 void mostrarTodo() {
@@ -221,8 +223,11 @@ int loadCities() {
         archivo.getline(cities[i].name, 30);
         archivo.getline(cities[i].description, 100);
         archivo.close();
-        return i;
+        i++;
     }
+
+    archivo.close();
+    return i;
 }
 
 void writeFile(const CITY &city) {
